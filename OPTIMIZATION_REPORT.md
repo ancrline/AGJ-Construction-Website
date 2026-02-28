@@ -20,7 +20,7 @@ Complete Lighthouse performance optimization completed across all pages. CSS min
 - ✅ Optimized closing patterns
 
 ### HTML Files Updated (9/9)
-All files now reference `/assets/css/main.min.css`:
+All files now reference `assets/css/main.min.css`:
 
 1. ✅ [index.html](index.html)
 2. ✅ [project.html](project.html)
@@ -83,11 +83,11 @@ All files now reference `/assets/css/main.min.css`:
 ### HTML Files (CSS Link Updated)
 All 9 HTML files updated from:
 ```html
-<link href="/assets/css/main.css" rel="stylesheet">
+<link href="assets/css/main.css" rel="stylesheet">
 ```
 To:
 ```html
-<link href="/assets/css/main.min.css" rel="stylesheet">
+<link href="assets/css/main.min.css" rel="stylesheet">
 ```
 
 ---
