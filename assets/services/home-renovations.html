@@ -12,11 +12,11 @@
   <link href="../img/apple-touch-icon.webp" rel="apple-touch-icon">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../vendor/aos/aos.css" rel="stylesheet">
-  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../libs/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../libs/aos/aos.css" rel="stylesheet">
+  <link href="../libs/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../libs/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
   <link href="../css/main.min.css" rel="stylesheet">
@@ -30,27 +30,62 @@
       </a>
       <nav id="navmenu" class="navmenu">
 <style>
-  .dropdown { position: relative; display: inline-block; }
-  .dropdown-content { display: none; position: absolute; background-color: #2c2c2c; min-width: 160px; z-index: 1; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); }
-  .dropdown-content a { color: grey; padding: 10px 16px; text-decoration: none; display: block; }
-  .dropdown:hover .dropdown-content { display: block; }
-  .dropdown-content a:hover { background-color: #f1f1f1; }
+  /* Dropdown container */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c2c2c;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: grey;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Show the dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Optional hover effect */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  /* remove underline from all nav links */
+  .navmenu ul li a { text-decoration: none; padding: 0 1rem; }
 </style>
 
 <ul>
   <li><a href="../../index.html" class="text-dark"><b>Home</b></a></li>
   <li><a href="../../about.html" class="text-dark"><b>About</b></a></li>
-  <li class="dropdown"><a href="#" class="text-dark" onclick="return false;"><b>Services</b></a>
+  
+  <li class="dropdown">
+    <a href="#" class="text-dark" onclick="return false;"><b>Services</b></a>
     <div class="dropdown-content">
-      <a href="new-builds.html">New Builds</a>
-      <a href="home-renovations.html">Home Renovations</a>
-      <a href="re-clads.html">Re-Clads</a>
-      <a href="decks.html">Decks</a>
-      <a href="hardscaping.html">Hardscaping</a>
+      <a href="new-builds.html" class="text-dark"><b>New Builds</b></a>
+      <a href="home-renovations.html" class="text-dark"><b>Home Renovations</b></a>
+      <a href="re-clads.html" class="text-dark"><b>Re-Clads</b></a>
+      <a href="decks.html" class="text-dark"><b>Decks</b></a>
+      <a href="hardscaping.html" class="text-dark"><b>Hardscaping</b></a>
     </div>
   </li>
+  
   <li><a href="../../project.html" class="text-dark"><b>Projects</b></a></li>
   <li><a href="../../contact.html" class="text-dark"><b>Contact</b></a></li>
+  <img class="sitename" src="../img/bcito-png.webp" alt="logo" width="100" height="50">
+  <img class="sitename" src="../img/lbp-png.webp" alt="logo" width="100" height="50">
 </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -89,8 +124,8 @@
     </div>
   </footer>
 
-  <script defer src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script defer src="../vendor/aos/aos.js"></script>
+  <script defer src="../libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../libs/aos/aos.js"></script>
   <script defer src="../js/main.js"></script>
 </body>
 
