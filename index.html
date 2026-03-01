@@ -30,13 +30,13 @@
 
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="https://agjconstruction.co.nz/" class="logo d-flex align-items-center">
-        <img class="sitename" src="assets/img/logo.webp" alt="logo" width="140" height="60">
-      </a>
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="/" class="logo d-flex align-items-center">
+      <img class="sitename img-fluid" src="/assets/img/logo.webp" alt="logo">
+    </a>
 
-      <nav id="navmenu" class="navmenu">
-     <style>
+    <nav id="navmenu" class="navmenu">
+<style>
   /* Dropdown container */
   .dropdown {
     position: relative;
@@ -70,27 +70,44 @@
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
+
+  /* Show dropdown when active (mobile) */
+  .dropdown.dropdown-active .dropdown-content {
+    display: block;
+  }
+
+  /* mobile menu: dropdowns should flow rather than absolute */
+  @media (max-width: 1199px) {
+    .navmenu .dropdown-content {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .navmenu .dropdown-content a {
+      padding-left: 1.5rem;
+    }
+  }
 </style>
 
 <ul>
-  <li><a href="https://agjconstruction.co.nz/" class="text-dark"><b>Home</b></a></li>
-  <li><a href="about.html" class="text-dark"><b>About</b></a></li>
+  <li><a href="/" class="text-dark"><b>Home</b></a></li>
+  <li><a href="/about.html" class="text-dark"><b>About</b></a></li>
   
   <li class="dropdown">
     <a href="#" class="text-dark" onclick="return false;"><b>Services</b></a>
     <div class="dropdown-content">
-      <a href="assets/services/new-builds.html"><b>New Builds</b></a>
-      <a href="assets/services/home-renovations.html"><b>Home Renovations</b></a>
-      <a href="assets/services/re-clads.html"><b>Reclads</b></a>
-      <a href="assets/services/decks.html"><b>Decks</b></a>
-      <a href="assets/services/hardscaping.html"><b>Hardscaping</b></a>
+      <a href="/assets/services/new-builds.html" class="text-dark"><b>New Builds</b></a>
+      <a href="/assets/services/home-renovations.html" class="text-dark"><b>Home Renovations</b></a>
+      <a href="/assets/services/re-clads.html" class="text-dark"><b>Re-Clads</b></a>
+      <a href="/assets/services/decks.html" class="text-dark"><b>Decks</b></a>
+      <a href="/assets/services/hardscaping.html" class="text-dark"><b>Hardscaping</b></a>
     </div>
   </li>
   
-  <li><a href="project.html" class="text-dark"><b>Projects</b></a></li>
-  <li><a href="contact.html" class="text-dark"><b>Contact</b></a></li>
-  <img class="sitename" src="assets/img/bcito-png.webp" alt="logo" width="100" height="50">
-  <img class="sitename" src="assets/img/lbp-png.webp" alt="logo" width="100" height="50">
+  <li><a href="/project.html" class="text-dark"><b>Projects</b></a></li>
+  <li><a href="/contact.html" class="text-dark"><b>Contact</b></a></li>
+  <li class="nav-item"><img class="sitename img-fluid" src="/assets/img/bcito-png.webp" alt="logo"></li>
+  <li class="nav-item"><img class="sitename img-fluid" src="/assets/img/lbp-png.webp" alt="logo"></li>
 </ul>
 
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -673,7 +690,7 @@
       <div class="row gy-4">
         <div class="col-lg-6 col-md-8 footer-about">
           <!-- <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">AGJ Construction</span>
+            <span class="sitename img-fluid">AGJ Construction</span>
           </a> -->
           <div class="footer-contact pt-3">
             <!-- <p>A-10 Sector 61, Noida</p> -->
@@ -686,17 +703,17 @@
             </a>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href="https://agjconstruction.co.nz/"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://agjconstruction.co.nz/"><i class="bi bi-facebook"></i></a>
-            <a href="https://agjconstruction.co.nz/"><i class="bi bi-instagram"></i></a>
-            <a href="https://agjconstruction.co.nz/"><i class="bi bi-linkedin"></i></a>
+            <a href="/"><i class="bi bi-twitter-x"></i></a>
+            <a href="/"><i class="bi bi-facebook"></i></a>
+            <a href="/"><i class="bi bi-instagram"></i></a>
+            <a href="/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-2 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="https://agjconstruction.co.nz/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="assets/services/new-builds.html">Services</a></li>
             <li><a href="project.html">Projects</a></li>
@@ -774,3 +791,6 @@
 </body>
 
 </html>
+
+
+

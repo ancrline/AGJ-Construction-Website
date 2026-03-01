@@ -343,6 +343,51 @@ h6 {
     background-color: rgba(33, 37, 41, 0.03);
   }
 
+  /* custom dropdown styles matching inline blocks */
+  .navmenu .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .navmenu .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2c2c2c;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .navmenu .dropdown-content a {
+    color: grey;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .navmenu .dropdown:hover .dropdown-content,
+  .navmenu .dropdown.dropdown-active .dropdown-content {
+    display: block;
+  }
+
+  .navmenu .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .navmenu ul li a { text-decoration: none; padding: 0 1rem; }
+
+  /* mobile menu: dropdowns should flow rather than absolute */
+  @media (max-width: 1199px) {
+    .navmenu .dropdown-content {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .navmenu .dropdown-content a {
+      padding-left: 1.5rem;
+    }
+  }
+
   .mobile-nav-active {
     overflow: hidden;
   }

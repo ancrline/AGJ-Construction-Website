@@ -35,12 +35,26 @@
    * Hide mobile nav on same-page/hash links
    */
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
+    navmenu.addEventListener('click', (e) => {
+      // do not hide the menu if the user is clicking the services toggle itself
+      if (navmenu.parentElement && navmenu.parentElement.classList.contains('dropdown')) {
+        return;
+      }
       if (document.querySelector('.mobile-nav-active')) {
         mobileNavToogle();
       }
     });
 
+  });
+
+  /* support toggle of custom dropdown on mobile devices */
+  document.querySelectorAll('.navmenu .dropdown > a').forEach(el => {
+    el.addEventListener('click', function(e) {
+      if (document.querySelector('.mobile-nav-active')) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('dropdown-active');
+      }
+    });
   });
 
   /**

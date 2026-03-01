@@ -24,11 +24,12 @@
 
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <a href="../../index.html" class="logo d-flex align-items-center">
-        <img class="sitename" src="../img/logo.webp" alt="logo">
-      </a>
-      <nav id="navmenu" class="navmenu">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+    <a href="/" class="logo d-flex align-items-center">
+      <img class="sitename img-fluid" src="/assets/img/logo.webp" alt="logo">
+    </a>
+
+    <nav id="navmenu" class="navmenu">
 <style>
   /* Dropdown container */
   .dropdown {
@@ -63,30 +64,46 @@
   .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
-  /* remove underline from all nav links */
-  .navmenu ul li a { text-decoration: none; padding: 0 1rem; }
+
+  /* Show dropdown when active (mobile) */
+  .dropdown.dropdown-active .dropdown-content {
+    display: block;
+  }
+
+  /* mobile menu: dropdowns should flow rather than absolute */
+  @media (max-width: 1199px) {
+    .navmenu .dropdown-content {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+    }
+    .navmenu .dropdown-content a {
+      padding-left: 1.5rem;
+    }
+  }
 </style>
 
 <ul>
-  <li><a href="../../index.html" class="text-dark"><b>Home</b></a></li>
-  <li><a href="../../about.html" class="text-dark"><b>About</b></a></li>
+  <li><a href="/" class="text-dark"><b>Home</b></a></li>
+  <li><a href="/about.html" class="text-dark"><b>About</b></a></li>
   
   <li class="dropdown">
     <a href="#" class="text-dark" onclick="return false;"><b>Services</b></a>
     <div class="dropdown-content">
-      <a href="new-builds.html" class="text-dark"><b>New Builds</b></a>
-      <a href="home-renovations.html" class="text-dark"><b>Home Renovations</b></a>
-      <a href="re-clads.html" class="text-dark"><b>Re-Clads</b></a>
-      <a href="decks.html" class="text-dark"><b>Decks</b></a>
-      <a href="hardscaping.html" class="text-dark"><b>Hardscaping</b></a>
+      <a href="/assets/services/new-builds.html" class="text-dark"><b>New Builds</b></a>
+      <a href="/assets/services/home-renovations.html" class="text-dark"><b>Home Renovations</b></a>
+      <a href="/assets/services/re-clads.html" class="text-dark"><b>Re-Clads</b></a>
+      <a href="/assets/services/decks.html" class="text-dark"><b>Decks</b></a>
+      <a href="/assets/services/hardscaping.html" class="text-dark"><b>Hardscaping</b></a>
     </div>
   </li>
   
-  <li><a href="../../project.html" class="text-dark"><b>Projects</b></a></li>
-  <li><a href="../../contact.html" class="text-dark"><b>Contact</b></a></li>
-  <img class="sitename" src="../img/bcito-png.webp" alt="logo" width="100" height="50">
-  <img class="sitename" src="../img/lbp-png.webp" alt="logo" width="100" height="50">
+  <li><a href="/project.html" class="text-dark"><b>Projects</b></a></li>
+  <li><a href="/contact.html" class="text-dark"><b>Contact</b></a></li>
+  <li class="nav-item"><img class="sitename img-fluid" src="/assets/img/bcito-png.webp" alt="logo"></li>
+  <li class="nav-item"><img class="sitename img-fluid" src="/assets/img/lbp-png.webp" alt="logo"></li>
 </ul>
+
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -130,3 +147,6 @@
 </body>
 
 </html>
+
+
+
