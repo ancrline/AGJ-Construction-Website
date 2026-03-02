@@ -415,6 +415,32 @@ h6 {
   }
 }
 
+/* ensure the hamburger icon stays visible on mobile even when scrolling */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    position: fixed; /* stay in viewport regardless of header */
+    top: 15px;
+    right: 15px;
+    z-index: 100000;
+    /* dark by default with a light outline for contrast */
+    color: var(--default-color);
+    text-shadow: 0 0 2px #fff;
+    background: rgba(0,0,0,0.6); /* darker translucent background */
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .mobile-nav-toggle:hover {
+    background: rgba(0,0,0,0.8);
+    transform: scale(1.1);
+  }
+  /* when menu is open switch back to white and remove outline */
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    text-shadow: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
