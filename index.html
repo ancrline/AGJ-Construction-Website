@@ -26,6 +26,22 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.min.css" rel="stylesheet">
+  <!-- page-specific overrides: keep the hamburger away from logo on index -->
+  <style>
+    @media (max-width: 1199px) {
+      /* position toggle below header and hug the right edge */
+      body.index-page .mobile-nav-toggle {
+        right: 8px;
+        left: auto;
+        /* push it below the header/logo area */
+        top: 15px;
+      }
+      /* give logo a bit of extra right space in case layout shifts */
+      body.index-page .logo {
+        margin-right: 55px;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
