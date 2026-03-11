@@ -133,12 +133,44 @@
 
   <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/page-title-bg.webp); min-height: 380px; background-size: cover; background-position: center;">
-      <div class="container position-relative">
-        <h1 style="font-size: 2rem; font-weight: 600; letter-spacing: 0.5px; line-height: 1.4; color: #fff;">Licensed Builder | New Builds | Renovations | Re-Clads | Decks | Hardscaping</h1>
+    <!-- Hero Section -->
+    <div class="hero-section" style="
+        background-image: url(assets/img/page-title-bg.webp);
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: flex-end;
+        position: relative;">
+      <!-- Dark overlay -->
+      <div style="
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to bottom, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.7) 100%);">
       </div>
-    </div><!-- End Page Title -->
+      <div class="container position-relative pb-5">
+        <h1 style="font-size: clamp(1.6rem, 3.5vw, 3rem); font-weight: 700; letter-spacing: 0.5px; line-height: 1.4; color: #fff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+          Licensed Builder | New Builds | Renovations | Re-Clads | Decks | Hardscaping
+        </h1>
+        <p style="color: rgba(255,255,255,0.85); font-size: clamp(1rem, 1.8vw, 1.25rem); margin-top: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
+          Auckland's trusted construction partner — quality craftsmanship, every time.
+        </p>
+        <a href="#get-started" style="
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            background-color: #f39c12;
+            color: #000;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;">
+          Request a Quote
+        </a>
+      </div>
+    </div><!-- End Hero Section -->
   
     <!-- About Us Started Section -->
     <section id="get-started" class="get-started section">
@@ -177,14 +209,10 @@
               </div>
             </div>
 
-          </div>
-         
+          </div>        
 
           <div class="col-lg-5 bg-dark p-4 rounded" data-aos="zoom-out" data-aos-delay="200">
-            <div class="email-form">
-              <h3 style="color: #f39c12; margin-bottom: 15px;"><b>Get Your Free Quote</b></h3>
-              <p class="text-light" style="margin-bottom: 25px;"><b>Ready to start your next building or renovation project? Tell us about your project below and we'll provide you with a professional quote within 24 hours.</b></p>
-              
+            <div class="email-form">              
               <form action="mailto:abhi@agjconstruction.co.nz" method="post" enctype="text/plain" onsubmit="return validateForm()">
                 <div class="row gy-3">
 
