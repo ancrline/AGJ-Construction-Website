@@ -68,10 +68,11 @@
 
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: grey;
+    color: #f8fafc !important;
     padding: 10px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   /* Show the dropdown on hover */
@@ -81,7 +82,8 @@
 
   /* Optional hover effect */
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #f39c12;
+    color: #111827 !important;
   }
 
   /* Show dropdown when active (mobile) */
@@ -98,6 +100,7 @@
     }
     .navmenu .dropdown-content a {
       padding-left: 1.5rem;
+      color: #212529 !important;
     }
   }
 </style>
@@ -129,8 +132,26 @@
   </header>
 
   <main class="main">
-    <div class="page-title dark-background" style="background-image: url(../img/page-title-bg.webp); min-height: 380px; background-size: cover; background-position: center;">
-      <div class="container position-relative"><h1 style="font-size: 2rem; font-weight: 600; letter-spacing: 0.5px; line-height: 1.4; color: #fff;">Licensed Builder | New Builds | Renovations | Re-Clads | Decks | Hardscaping</h1></div>
+    <div class="page-title dark-background" style="--background-color: #1f2730; background-image: url(../img/page-title-bg.webp); min-height: 380px; background-size: cover; background-position: center;">
+      <div class="container position-relative">
+        <h1 style="font-size: 2rem; font-weight: 600; letter-spacing: 0.5px; line-height: 1.4; color: #fff;">Licensed Builder | New Builds | Renovations | Re-Clads | Decks | Hardscaping</h1>
+        <p style="color: rgba(255,255,255,0.85); font-size: clamp(1rem, 1.8vw, 1.25rem); margin-top: 1rem; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
+          Auckland's trusted construction partner - quality craftsmanship, every time.
+        </p>
+        <a href="../../contact.html" style="
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            background-color: #f39c12;
+            color: #000;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;">
+          Request a Quote
+        </a>
+      </div>
     </div>
 
     <section class="section" data-aos="fade-up">
